@@ -1,0 +1,70 @@
+# Compiled Object files
+*.slo
+*.lo
+*.o
+*.obj
+
+# Precompiled Headers
+*.gch
+*.pch
+
+# Compiled Dynamic libraries
+#*.so
+*.dylib
+*.dll
+
+# Fortran module files
+*.mod
+
+# Compiled Static libraries
+*.lai
+*.la
+#*.a
+*.lib
+
+# Executables
+*.exe
+*.out
+*.app
+
+# Eclipse files
+.cproject
+.project
+.settings
+
+# Build outputs
+build*
+cmake-build-*
+.idea
+
+# Test data
+test_data
+
+# ctags
+tags
+
+# swp file
+*.swp
+
+# bak file
+*~
+
+# Ocr_xia
+ocr_xia
+
+deps
+deps/*
+
+install
+install/*
+
+target
+target/*
+
+#vscode settings
+.vscode/
+
+prerequisites
+prerequisites/*
+extracted
+ros/msg/package.xml

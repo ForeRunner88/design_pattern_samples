@@ -1,0 +1,16 @@
+set(EXECUTABLE_OUTPUT_PATH bin)
+
+SUBDIRLIST(sub_dirs_list ${CMAKE_CURRENT_LIST_DIR})
+if(NOT "${sub_dirs_list}" STREQUAL "")
+    foreach(dir ${sub_dirs_list})
+        file(GLOB INC_FILES ${dir}/*.hpp)
+        file(GLOB SRC_FILES ${dir}/*.cpp)
+        get_filename_component(current_dir ${CMAKE_CURRENT_LIST_DIR} NAME)
+        string(REGEX REPLACE "^sample_[0-9]*" "${dir}" bin_name ${current_dir})
+        if(SRC_FILES)
+            add_executable(${bin_name} ${INC_FILES} ${SRC_FILES})
+            install(TARGETS ${bin_name} RUNTIME DESTINATION bin)
+        endif()
+    endforeach()
+endif()
+
